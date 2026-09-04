@@ -8,7 +8,7 @@ Plain HTML, CSS and JavaScript. No build step, no dependencies.
 ```
 index.html                  # the whole site (single page)
 styles.css                  # theme tokens, layout, responsive rules
-script.js                   # theme toggle, mobile nav, scroll reveal, active nav link
+script.js                   # analytics config, theme toggle, nav, typewriter, spotlight, clock
 404.html                    # GitHub Pages "not found" page
 favicon.svg
 assets/                     # drop your resume PDF here (see below)
@@ -46,14 +46,39 @@ file is already present so Pages serves the files as-is.
 - **Resume PDF:** the "Résumé" button links to `assets/Mehraz_Hossain_Rumman_Resume.pdf`.
   Copy your PDF into `assets/` with that exact name, or edit the `href` in `index.html`.
 - **Profile photo:** the hero uses your GitHub avatar. To use a different photo, put it in
-  `assets/` and update the `<img src>` in the hero section of `index.html`.
+  `assets/` and update the `<img class="avatar">` source in `index.html`.
 - **KachaMorich link:** the resume lists a GitHub organization but not its URL. The card
   currently points at your GitHub profile. Update the `href` on the KachaMorich card.
 - **DSP with FFT:** the resume links to a Google Drive file. Add the link if you want it public.
 - **Renaming the repo:** the canonical URL in `index.html` and the home link in `404.html` both
   assume the `/rumman-portfolio/` path. Update them if the repo name changes.
 
+## Analytics (who is visiting)
+
+Open `script.js` and fill in **one** of the two IDs at the top of the file. Nothing is loaded
+until you do, and nothing is loaded when the site is opened locally.
+
+```js
+var ANALYTICS = {
+  goatcounter: '',   // e.g. 'mehraz'  → dashboard at https://mehraz.goatcounter.com
+  ga4: ''            // e.g. 'G-XXXXXXXXXX'
+};
+```
+
+- **GoatCounter** (recommended): free for personal sites, no cookies, no consent banner. Sign up at
+  https://www.goatcounter.com, pick a code, paste it, push. The dashboard shows visits, unique
+  visitors, pages, referrers, countries, browsers and screen sizes.
+- **Google Analytics 4**: create a property at https://analytics.google.com and paste the
+  Measurement ID. More detail (real-time view, demographics) but heavier and cookie-based.
+
+Neither can tell you *who* a visitor is by name. That is by design and by law. You get counts,
+countries, referrers and devices.
+
 ## Customising
 
-All colors are CSS custom properties at the top of `styles.css`. Change `--accent`,
-`--grad-a` and `--grad-b` in both the dark and light blocks to re-theme the site.
+Colors are CSS custom properties at the top of `styles.css`: `--bg`, `--text`, `--accent` and
+`--accent-2` (the gradient pair). Dark is the default; the `[data-theme="light"]` block holds the
+light palette. Fonts (Geist and Geist Mono) load from Google Fonts in the `<head>` of `index.html`.
+
+The hero terminal lines live in `index.html` inside `<pre id="terminal">`. Each `.tline` has a
+`data-cmd` (the typed command) and its text content (the output).
