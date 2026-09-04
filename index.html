@@ -89,23 +89,50 @@
         </div>
       </div>
 
-      <div class="terminal reveal" aria-label="Terminal introduction">
-        <div class="terminal-bar">
-          <span class="tdot" style="--c:#ff5f57"></span><span class="tdot" style="--c:#febc2e"></span><span class="tdot" style="--c:#28c840"></span>
-          <span class="terminal-title">mehraz@dhaka — zsh</span>
+      <div class="id-card reveal" id="id-card">
+        <div class="id-inner">
+          <div class="id-top">
+            <span class="mono">Developer ID</span>
+            <span class="id-chip" aria-hidden="true"><span></span><span></span><span></span></span>
+          </div>
+          <div class="id-person">
+            <img class="id-photo" src="https://avatars.githubusercontent.com/u/59512321?v=4" alt="Portrait of Mehraz Hossain Rumman" width="96" height="96">
+            <div class="id-who">
+              <p class="id-name">Mehraz Hossain Rumman</p>
+              <p class="id-role">Software Engineer · Adfinix</p>
+              <p class="id-loc mono"><span class="status-dot" aria-hidden="true"></span>Dhaka, Bangladesh · <span id="local-time">--:--</span></p>
+            </div>
+          </div>
+          <dl class="id-facts">
+            <div><dt>Focus</dt><dd>Backend · Ad-tech · Data</dd></div>
+            <div><dt>Experience</dt><dd>3+ years</dd></div>
+            <div><dt>Open source</dt><dd>Django · DRF · Scrapy · Celery · pyOBIS</dd></div>
+            <div><dt>Highlight</dt><dd>GSoC 2025 · Keynote, Hacking Limnology</dd></div>
+          </dl>
+          <div class="id-foot">
+            <ul class="gh-stats" aria-label="GitHub stats">
+              <li><strong id="gh-repos">59</strong> repos</li>
+              <li><strong id="gh-followers">18</strong> followers</li>
+              <li id="gh-stars-item" hidden><strong id="gh-stars">—</strong> stars</li>
+            </ul>
+            <a class="id-link" href="https://github.com/MehrazRumman" target="_blank" rel="noopener">github.com/MehrazRumman <span class="arr" aria-hidden="true">↗</span></a>
+          </div>
+          <span class="id-sheen" aria-hidden="true"></span>
         </div>
-        <pre class="terminal-body" id="terminal"><code><span class="tline" data-cmd="whoami">mehraz — software engineer, dhaka</span><span class="tline" data-cmd="cat stack.txt">django · drf · clickhouse · mongodb · go · next.js</span><span class="tline" data-cmd="gh pr list --author MehrazRumman --state merged">django  drf  drf-extensions  scrapy  celery  pyobis</span><span class="tline" data-cmd="echo $GSOC_2025">IOOS · pyOBIS HTTP caching → merged upstream</span><span class="tline" data-cmd="uptime">3+ years shipping · 2 backends built from scratch</span></code></pre>
       </div>
     </section>
 
     <!-- ================= BENTO ================= -->
     <section class="bento container" id="about" aria-label="At a glance">
-      <article class="card tile tile-photo reveal">
-        <img src="https://avatars.githubusercontent.com/u/59512321?v=4" alt="Portrait of Mehraz Hossain Rumman" width="400" height="400">
-        <div class="tile-photo-cap">
-          <span class="mono">Dhaka, Bangladesh</span>
-          <span class="mono clock"><span id="local-time">--:--</span> local</span>
+      <article class="card tile tile-github reveal">
+        <div class="tile-head">
+          <p class="tile-label">Popular on GitHub</p>
+          <a class="tile-more" href="https://github.com/MehrazRumman?tab=repositories" target="_blank" rel="noopener">All repos <span class="arr" aria-hidden="true">→</span></a>
         </div>
+        <ul class="gh-repos" id="gh-repos-list">
+          <li><a href="https://github.com/MehrazRumman/gortb" target="_blank" rel="noopener"><span class="gh-name">gortb</span><span class="gh-desc">Open RTB 2.5 implementation in GoLang</span><span class="gh-meta mono">Go · ★ 7</span></a></li>
+          <li><a href="https://github.com/MehrazRumman/fastapi-observer" target="_blank" rel="noopener"><span class="gh-name">fastapi-observer</span><span class="gh-desc">Structured logging and observability middleware for FastAPI</span><span class="gh-meta mono">Python · ★ 4</span></a></li>
+        </ul>
       </article>
 
       <article class="card tile tile-now reveal">

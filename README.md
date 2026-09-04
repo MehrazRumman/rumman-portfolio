@@ -8,7 +8,7 @@ Plain HTML, CSS and JavaScript. No build step, no dependencies.
 ```
 index.html                  # the whole site (single page)
 styles.css                  # theme tokens, layout, responsive rules
-script.js                   # analytics config, theme toggle, nav, typewriter, spotlight, clock
+script.js                   # analytics config, theme toggle, nav, card tilt, GitHub fetch, clock
 404.html                    # GitHub Pages "not found" page
 favicon.svg
 assets/                     # drop your resume PDF here (see below)
@@ -80,5 +80,6 @@ Colors are CSS custom properties at the top of `styles.css`: `--bg`, `--text`, `
 `--accent-2` (the gradient pair). Dark is the default; the `[data-theme="light"]` block holds the
 light palette. Fonts (Geist and Geist Mono) load from Google Fonts in the `<head>` of `index.html`.
 
-The hero terminal lines live in `index.html` inside `<pre id="terminal">`. Each `.tline` has a
-`data-cmd` (the typed command) and its text content (the output).
+The hero card and the "Popular on GitHub" tile pull live numbers (repos, followers, stars, most
+starred repos) from the public GitHub API in the visitor's browser. No token is needed.
+If the API is unavailable the static values in `index.html` stay in place.

@@ -114,50 +114,71 @@ var ANALYTICS = {
     }, { passive: true });
   }
 
-  /* ---------- Terminal typewriter ---------- */
-  var term = document.getElementById('terminal');
-  if (term) {
-    var lines = Array.prototype.slice.call(term.querySelectorAll('.tline'));
-    if (reduceMotion) {
-      // Show everything immediately.
-    } else {
-      var code = term.querySelector('code');
-      var cursor = document.createElement('span');
-      cursor.className = 'cursor';
-      cursor.setAttribute('aria-hidden', 'true');
-      lines.forEach(function (l) {
-        l.dataset.out = l.textContent;
-        l.dataset.full = l.dataset.cmd;
-        l.textContent = '';
-        l.dataset.cmd = '';
-        l.classList.add('hidden');
-      });
-      code.appendChild(cursor);
-
-      var idx = 0;
-      function typeLine() {
-        if (idx >= lines.length) return;
-        var line = lines[idx];
-        var full = line.dataset.full;
-        var pos = 0;
-        line.classList.remove('hidden');
-        line.parentNode.insertBefore(cursor, line.nextSibling);
-        var t = setInterval(function () {
-          pos++;
-          line.dataset.cmd = full.slice(0, pos);
-          if (pos >= full.length) {
-            clearInterval(t);
-            setTimeout(function () {
-              line.textContent = line.dataset.out;
-              idx++;
-              setTimeout(typeLine, 320);
-            }, 260);
-          }
-        }, 38);
-      }
-      setTimeout(typeLine, 500);
-    }
+  /* ---------- Developer ID card: tilt + sheen ---------- */
+  var idCard = document.getElementById('id-card');
+  var idInner = idCard && idCard.querySelector('.id-inner');
+  if (idCard && idInner && !reduceMotion && window.matchMedia('(hover: hover)').matches) {
+    idCard.addEventListener('pointermove', function (e) {
+      var r = idCard.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width;
+      var py = (e.clientY - r.top) / r.height;
+      idInner.style.setProperty('--ry', ((px - 0.5) * 10).toFixed(2) + 'deg');
+      idInner.style.setProperty('--rx', ((0.5 - py) * 8).toFixed(2) + 'deg');
+      idInner.style.setProperty('--sx', (px * 100).toFixed(1) + '%');
+      idInner.style.setProperty('--sy', (py * 100).toFixed(1) + '%');
+    });
+    idCard.addEventListener('pointerleave', function () {
+      idInner.style.setProperty('--rx', '0deg');
+      idInner.style.setProperty('--ry', '0deg');
+    });
   }
+
+  /* ---------- Live GitHub data (public API, no auth) ---------- */
+  (function github() {
+    var user = 'MehrazRumman';
+    var reposEl = document.getElementById('gh-repos');
+    var followersEl = document.getElementById('gh-followers');
+    var starsEl = document.getElementById('gh-stars');
+    var starsItem = document.getElementById('gh-stars-item');
+    var list = document.getElementById('gh-repos-list');
+    if (!window.fetch || (!reposEl && !list)) return;
+
+    function fmt(n) { return n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(n); }
+    function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+
+    fetch('https://api.github.com/users/' + user, { headers: { Accept: 'application/vnd.github+json' } })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (u) {
+        if (!u) return;
+        if (reposEl && typeof u.public_repos === 'number') reposEl.textContent = fmt(u.public_repos);
+        if (followersEl && typeof u.followers === 'number') followersEl.textContent = fmt(u.followers);
+      }).catch(function () {});
+
+    fetch('https://api.github.com/users/' + user + '/repos?per_page=100&type=owner', { headers: { Accept: 'application/vnd.github+json' } })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (repos) {
+        if (!Array.isArray(repos) || !repos.length) return;
+        var own = repos.filter(function (r) { return !r.fork; });
+        var stars = own.reduce(function (s, r) { return s + (r.stargazers_count || 0); }, 0);
+        if (starsEl && starsItem && stars > 0) { starsEl.textContent = fmt(stars); starsItem.hidden = false; }
+        if (!list) return;
+        var top = own
+          .filter(function (r) { return !r.archived; })
+          .sort(function (a, b) {
+            return (b.stargazers_count - a.stargazers_count) || (new Date(b.pushed_at) - new Date(a.pushed_at));
+          })
+          .slice(0, 4);
+        if (!top.length) return;
+        list.innerHTML = top.map(function (r) {
+          var meta = [r.language, r.stargazers_count ? '★ ' + r.stargazers_count : null].filter(Boolean).join(' · ');
+          return '<li><a href="' + esc(r.html_url) + '" target="_blank" rel="noopener">' +
+            '<span class="gh-name">' + esc(r.name) + '</span>' +
+            (r.description ? '<span class="gh-desc">' + esc(r.description) + '</span>' : '') +
+            (meta ? '<span class="gh-meta mono">' + esc(meta) + '</span>' : '') +
+            '</a></li>';
+        }).join('');
+      }).catch(function () {});
+  })();
 
   /* ---------- Local time in Dhaka ---------- */
   var clock = document.getElementById('local-time');
