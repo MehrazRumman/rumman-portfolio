@@ -10,7 +10,7 @@
    copy the Measurement ID (looks like G-XXXXXXXXXX) and set:   ga4: 'G-XXXXXXXXXX'
    ========================================================================== */
 var ANALYTICS = {
-  goatcounter: '',
+  goatcounter: 'mehrazrumman',
   ga4: ''
 };
 
