@@ -43,6 +43,38 @@ var ANALYTICS = {
     }
   })();
 
+  /* ---------- Visitor counter (GoatCounter public counter endpoint) ---------- */
+  (function visitorCounter() {
+    var strip = document.getElementById('visits');
+    var todayEl = document.getElementById('visits-today');
+    var totalEl = document.getElementById('visits-total');
+    if (!strip || !todayEl || !totalEl || !ANALYTICS.goatcounter || !window.fetch) return;
+
+    var base = 'https://' + ANALYTICS.goatcounter + '.goatcounter.com/counter/TOTAL.json';
+    function num(s) { var n = parseInt(String(s).replace(/[^\d]/g, ''), 10); return isNaN(n) ? null : n; }
+    function today() {
+      try {
+        return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Dhaka', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+      } catch (e) { return new Date().toISOString().slice(0, 10); }
+    }
+    function get(url) {
+      return fetch(url, { headers: { Accept: 'application/json' } }).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      });
+    }
+    Promise.all([get(base), get(base + '?start=' + today())]).then(function (res) {
+      var total = num(res[0] && res[0].count);
+      var day = num(res[1] && res[1].count);
+      if (total === null) return;
+      totalEl.textContent = total.toLocaleString('en-US');
+      todayEl.textContent = (day === null ? 0 : day).toLocaleString('en-US');
+      strip.hidden = false;
+    }).catch(function (err) {
+      if (window.console) console.warn('Visitor counter unavailable. In GoatCounter, enable "Allow using the visitor counter" under Settings.', err && err.message);
+    });
+  })();
+
   /* ---------- Theme toggle (dark is default) ---------- */
   var toggle = document.getElementById('theme-toggle');
   if (toggle) {

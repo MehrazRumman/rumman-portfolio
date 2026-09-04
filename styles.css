@@ -302,6 +302,17 @@ a.card:hover, .project:hover { border-color: var(--border-strong); transform: tr
 .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 1.75rem; font-weight: 500; font-size: 0.95rem; color: var(--text-2); }
 .contact-links a:hover { color: var(--text); }
 
+/* ---------- Visitor counter ---------- */
+.visits { padding-bottom: 1.25rem; }
+.visits-inner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem 1.25rem; width: max-content; max-width: 100%; margin-inline: auto;
+  padding: 0.7rem 1.35rem; border-radius: 999px; border: 1px solid var(--border); background: var(--surface);
+  font-family: var(--mono); font-size: 0.76rem; color: var(--text-2);
+}
+.visits-label { display: inline-flex; align-items: center; gap: 0.55rem; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.66rem; color: var(--text-3); }
+.visits-item strong { color: var(--text); font-size: 0.95rem; font-weight: 600; font-variant-numeric: tabular-nums; margin-right: 0.15rem; }
+.visits-sep { width: 1px; height: 1rem; background: var(--border-strong); }
+
 /* ---------- Footer ---------- */
 .footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; padding: 1.75rem 0 2.5rem; font-size: 0.85rem; color: var(--text-3); border-top: 1px solid var(--border); }
 .footer a { color: var(--text-2); }

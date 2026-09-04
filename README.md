@@ -71,6 +71,11 @@ var ANALYTICS = {
 - **Google Analytics 4**: create a property at https://analytics.google.com and paste the
   Measurement ID. More detail (real-time view, demographics) but heavier and cookie-based.
 
+**Visitor counter on the page.** The strip above the footer shows today's and all-time visits
+using GoatCounter's public counter endpoint. It stays hidden until that endpoint responds, which
+requires one setting in GoatCounter: **Settings → Site settings → "Allow using the visitor
+counter"**. Counts are cached by GoatCounter for up to four hours, so new visits lag a little.
+
 Neither can tell you *who* a visitor is by name. That is by design and by law. You get counts,
 countries, referrers and devices.
 
