@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mehraz Hossain Rumman — Software Engineer</title>
+  <meta name="description" content="Mehraz Hossain Rumman is a software engineer in Dhaka, Bangladesh building ad-tech backends with Django and ClickHouse. Google Summer of Code 2025 contributor at IOOS and open-source contributor to Django, DRF, Scrapy and Celery.">
+  <meta name="author" content="Mehraz Hossain Rumman">
+  <meta name="theme-color" content="#0a0d14" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f8fb" media="(prefers-color-scheme: light)">
+  <link rel="canonical" href="https://mehrazrumman.github.io/rumman-portfolio/">
+  <meta property="og:url" content="https://mehrazrumman.github.io/rumman-portfolio/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mehraz Hossain Rumman — Software Engineer">
+  <meta property="og:description" content="Backend engineer building ad-tech systems with Django and ClickHouse. GSoC 2025 contributor at IOOS. Open-source contributor to Django, DRF, Scrapy and Celery.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/59512321?v=4">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply a saved theme before first paint to avoid a flash.
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark">MR</span>
+        <span class="brand-text">Mehraz Rumman</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#open-source">Open Source</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#writing">Talks &amp; Writing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <span class="theme-label">Switch theme</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero container" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span>Software Engineer · Dhaka, Bangladesh</p>
+        <h1>Mehraz Hossain <span class="grad">Rumman</span></h1>
+        <p class="lead">
+          I build backends for ad-tech at scale: real-time bidding, click and impression pipelines,
+          and analytics on <strong>Django</strong> and <strong>ClickHouse</strong>. Google Summer of Code 2025
+          contributor with IOOS, and an open-source contributor to Django, Django REST Framework, Scrapy and Celery.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#experience">See my work</a>
+          <a class="btn btn-ghost" href="assets/Mehraz_Hossain_Rumman_Resume.pdf" download>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            Résumé
+          </a>
+        </div>
+        <ul class="social-row" aria-label="Profiles">
+          <li><a href="https://github.com/MehrazRumman" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/mehraz-rumman/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li>
+          <li><a href="https://medium.com/@MehrazHossainRumman" target="_blank" rel="noopener" aria-label="Medium"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h3l5 9 5-9h3M4 18h4M16 18h4M12 15v3"/></svg></a></li>
+          <li><a href="https://codeforces.com/profile/keai33" target="_blank" rel="noopener" aria-label="Codeforces"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="4" height="9" rx="1"/><rect x="10" y="4" width="4" height="16" rx="1"/><rect x="17" y="8" width="4" height="12" rx="1"/></svg></a></li>
+          <li><a href="mailto:mehrazrumman@gmail.com" aria-label="Email"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="hero-card reveal">
+        <div class="avatar-wrap">
+          <img src="https://avatars.githubusercontent.com/u/59512321?v=4" alt="Portrait of Mehraz Hossain Rumman" width="200" height="200">
+        </div>
+        <dl class="hero-stats">
+          <div><dt>Experience</dt><dd>3+ yrs</dd></div>
+          <div><dt>GSoC</dt><dd>2025 · IOOS</dd></div>
+          <div><dt>OSS projects</dt><dd>6</dd></div>
+          <div><dt>ICPC 2021</dt><dd>Hon. Mention</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section container" id="about">
+      <header class="section-head reveal">
+        <p class="section-num">01</p>
+        <h2>About</h2>
+      </header>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>
+            I'm a mathematics graduate turned backend engineer. At <strong>Adfinix</strong> I've built two ad-tech
+            products from the ground up, <strong>Adsloft</strong> and <strong>Aifinix</strong>, covering everything from
+            OpenRTB bidding flows and event ingestion to the analytics dashboards that advertisers and publishers
+            actually read.
+          </p>
+          <p>
+            Outside of work I contribute to the Python ecosystem I depend on. Through Google Summer of Code I shipped
+            HTTP caching to <strong>pyOBIS</strong> for the Integrated Ocean Observing System, then took the work on stage
+            as a keynote speaker at Hacking Limnology 2025. I've also landed patches in Django, Django REST Framework,
+            DRF-extensions, Scrapy and Celery.
+          </p>
+          <p>
+            I like problems where performance, correctness and data meet, and I've been teaching Python to students
+            since 2022 because explaining something is the best way to understand it.
+          </p>
+        </div>
+        <aside class="about-side reveal">
+          <div class="card now-card">
+            <p class="card-label">Currently</p>
+            <ul class="plain-list">
+              <li><span class="pulse-dot" aria-hidden="true"></span>Software Engineer at Adfinix, building Adsloft &amp; Aifinix</li>
+              <li><span class="pulse-dot" aria-hidden="true"></span>Teaching Python online, beginner to intermediate</li>
+              <li><span class="pulse-dot" aria-hidden="true"></span>Contributing to Django &amp; the DRF ecosystem</li>
+            </ul>
+          </div>
+          <div class="card">
+            <p class="card-label">Education</p>
+            <p class="edu-title">B.Sc. in Mathematics</p>
+            <p class="muted">Jagannath University, Dhaka · 2019 – 2024</p>
+            <p class="muted">GPA 3.59 / 4.00</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section container" id="experience">
+      <header class="section-head reveal">
+        <p class="section-num">02</p>
+        <h2>Experience</h2>
+      </header>
+
+      <ol class="timeline">
+        <li class="timeline-item reveal">
+          <div class="timeline-meta">
+            <span class="mono">Jul 2024 — Present</span>
+            <span class="muted">Dhaka, Bangladesh</span>
+          </div>
+          <div class="timeline-body">
+            <h3>Software Engineer <span class="at">@ Adfinix</span></h3>
+            <ul class="bullets">
+              <li>Built the <strong>Adsloft</strong> backend from scratch: a SaaS that tracks DSP/SSP clicks, impressions and views and generates real-time data and detailed reports for advertisers and publishers.</li>
+              <li>Built the <strong>Aifinix</strong> backend from scratch with Django and DRF, designing scalable APIs, authentication, analytics pipelines and business logic; contributed to its frontend as well.</li>
+              <li>Designed and delivered an analytical dashboard end to end: schema design, backend aggregation logic and frontend visualization for real-time insights.</li>
+              <li>Upgraded the Adfinix product from Django 3.2 to 5.1 along with its dependencies, fixing bugs and optimizing hot paths along the way.</li>
+              <li>Implemented CPM and frequency capping, built rich media ads, and resolved API issues across the platform.</li>
+              <li>Worked with <strong>OpenRTB</strong> for real-time bidding and built a mock server to test DSP and SSP request-response interactions.</li>
+              <li>Used MongoDB for high-volume event and analytics data, and wrote a Slack bot to automate internal workflows and notifications.</li>
+              <li>Built the Adsloft marketing site in Next.js with a focus on performance and responsive design.</li>
+            </ul>
+            <ul class="tags">
+              <li>Django</li><li>DRF</li><li>ClickHouse</li><li>MongoDB</li><li>Next.js</li><li>OpenRTB</li><li>Docker</li><li>Jenkins</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal">
+          <div class="timeline-meta">
+            <span class="mono">May 2025 — Jul 2025</span>
+            <span class="muted">Remote</span>
+          </div>
+          <div class="timeline-body">
+            <h3>Google Summer of Code Contributor <span class="at">@ IOOS</span></h3>
+            <ul class="bullets">
+              <li>Implemented HTTP-level caching in the <strong>pyOBIS</strong> Python package using requests-cache, with cross-platform cache paths, unit tests and docs. All PRs merged upstream.</li>
+              <li>Built a seagrass habitat analysis notebook combining OBIS and GBIF occurrence data with environmental variables: One-Class SVM anomaly detection, temporal analysis and Species Distribution Model mapping.</li>
+              <li>Developed and tested machine learning models for ecological data and published reproducible Jupyter workflows.</li>
+              <li>Keynote speaker and workshop instructor at <strong>Hacking Limnology 2025</strong> on pyOBIS and marine ecological modeling.</li>
+            </ul>
+            <ul class="tags">
+              <li>Python</li><li>requests-cache</li><li>Pandas</li><li>scikit-learn</li><li>xarray</li><li>Jupyter</li>
+            </ul>
+            <p class="links-row">
+              <a href="https://gist.github.com/MehrazRumman/bc59c0b9672e1f976a7bd790e4f662b0" target="_blank" rel="noopener">Final report <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/iobis/pyobis" target="_blank" rel="noopener">pyOBIS <span aria-hidden="true">↗</span></a>
+            </p>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal">
+          <div class="timeline-meta">
+            <span class="mono">Nov 2022 — Present</span>
+            <span class="muted">Remote · Freelance</span>
+          </div>
+          <div class="timeline-body">
+            <h3>Online Python Trainer</h3>
+            <ul class="bullets">
+              <li>Teach Python from beginner to intermediate level, with a focus on debugging, reading errors and problem-solving.</li>
+              <li>Introduce core data structures and algorithms, and run weekly exams and coding challenges to track progress.</li>
+            </ul>
+            <ul class="tags"><li>Python</li><li>DSA</li><li>Mentoring</li></ul>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal">
+          <div class="timeline-meta">
+            <span class="mono">Apr 2022 — May 2024</span>
+            <span class="muted">Dhaka · Remote</span>
+          </div>
+          <div class="timeline-body">
+            <h3>Trainee Software Developer <span class="at">@ TrendBreaker</span></h3>
+            <ul class="bullets">
+              <li>Built a desktop application with PyQt5 for improved user interaction and productivity.</li>
+              <li>Developed a React Native mobile app with a Django backend, delivering a cross-platform experience.</li>
+              <li>Worked on data analysis projects to support business decisions.</li>
+            </ul>
+            <ul class="tags"><li>PyQt5</li><li>React Native</li><li>Django</li><li>Data Analysis</li></ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ OPEN SOURCE ============ -->
+    <section class="section container" id="open-source">
+      <header class="section-head reveal">
+        <p class="section-num">03</p>
+        <h2>Open Source</h2>
+        <p class="section-sub">Patches merged into projects I use every day.</p>
+      </header>
+
+      <div class="grid grid-3">
+        <a class="card card-link reveal" href="https://github.com/iobis/pyobis/pulls?q=is%3Apr+author%3AMehrazRumman" target="_blank" rel="noopener">
+          <div class="card-top"><span class="card-title">pyOBIS</span><span class="ext" aria-hidden="true">↗</span></div>
+          <p>HTTP caching feature, OS-specific cache paths, docs and tests. Delivered through GSoC 2025.</p>
+          <ul class="tags"><li>Feature</li><li>Python</li></ul>
+        </a>
+        <a class="card card-link reveal" href="https://github.com/chibisov/drf-extensions/pulls?q=is%3Apr+author%3AMehrazRumman" target="_blank" rel="noopener">
+          <div class="card-top"><span class="card-title">DRF-extensions</span><span class="ext" aria-hidden="true">↗</span></div>
+          <p>6 PRs merged: test fixes, cleanup and version upgrades across the Django REST Framework extension set.</p>
+          <ul class="tags"><li>6 PRs</li><li>Python</li></ul>
+        </a>
+        <a class="card card-link reveal" href="https://github.com/scrapy/scrapy/pulls?q=is%3Apr+author%3AMehrazRumman" target="_blank" rel="noopener">
+          <div class="card-top"><span class="card-title">Scrapy</span><span class="ext" aria-hidden="true">↗</span></div>
+          <p>3 PRs merged covering test fixes and cleanup in the web-crawling framework.</p>
+          <ul class="tags"><li>3 PRs</li><li>Python</li></ul>
+        </a>
+        <a class="card card-link reveal" href="https://github.com/django/django/pulls?q=is%3Apr+author%3AMehrazRumman" target="_blank" rel="noopener">
+          <div class="card-top"><span class="card-title">Django</span><span class="ext" aria-hidden="true">↗</span></div>
+          <p>Minor improvements and patches. Listed among first-time contributors in Django News.</p>
+          <ul class="tags"><li>Patches</li><li>Python</li></ul>
+        </a>
+        <a class="card card-link reveal" href="https://github.com/encode/django-rest-framework/pulls?q=is%3Apr+author%3AMehrazRumman" target="_blank" rel="noopener">
+          <div class="card-top"><span class="card-title">Django REST Framework</span><span class="ext" aria-hidden="true">↗</span></div>
+          <p>Fixes and improvements to the toolkit that powers most of my day job.</p>
+          <ul class="tags"><li>Fixes</li><li>Python</li></ul>
+        </a>
+        <a class="card card-link reveal" href="https://github.com/celery/celery/pulls?q=is%3Apr+author%3AMehrazRumman" target="_blank" rel="noopener">
+          <div class="card-top"><span class="card-title">Celery</span><span class="ext" aria-hidden="true">↗</span></div>
+          <p>Bug fixes and enhancements to the distributed task queue.</p>
+          <ul class="tags"><li>Bug fixes</li><li>Python</li></ul>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section container" id="projects">
+      <header class="section-head reveal">
+        <p class="section-num">04</p>
+        <h2>Projects</h2>
+      </header>
+
+      <div class="grid grid-2">
+        <article class="card project reveal">
+          <div class="card-top">
+            <span class="card-title">GoRTB</span>
+            <a class="ext-link" href="https://github.com/MehrazRumman/gortb" target="_blank" rel="noopener" aria-label="GoRTB on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <p>A full OpenRTB 2.5 implementation in Go: type-safe bid request and response structs, validation, and high-performance JSON serialization for real-time bidding systems.</p>
+          <ul class="tags"><li>Go</li><li>OpenRTB 2.5</li><li>Ad-tech</li></ul>
+        </article>
+
+        <article class="card project reveal">
+          <div class="card-top">
+            <span class="card-title">fastapi-observer</span>
+            <a class="ext-link" href="https://github.com/MehrazRumman/fastapi-observer" target="_blank" rel="noopener" aria-label="fastapi-observer on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <p>Zero-boilerplate structured logging and observability middleware for FastAPI. Pluggable storage backends (in-memory, JSON, SQLite), filtering, and a built-in dashboard for browsing events.</p>
+          <ul class="tags"><li>Python</li><li>FastAPI</li><li>Observability</li></ul>
+        </article>
+
+        <article class="card project reveal">
+          <div class="card-top">
+            <span class="card-title">Adsloft</span>
+            <span class="badge">Work · Adfinix</span>
+          </div>
+          <p>SaaS platform tracking DSP/SSP clicks, impressions and views with real-time reporting for advertisers and publishers. Backend built from scratch; ClickHouse for event analytics; marketing site in Next.js.</p>
+          <ul class="tags"><li>Django</li><li>DRF</li><li>ClickHouse</li><li>Next.js</li><li>Docker</li><li>Jenkins</li></ul>
+        </article>
+
+        <article class="card project reveal">
+          <div class="card-top">
+            <span class="card-title">Aifinix</span>
+            <span class="badge">Work · Adfinix</span>
+          </div>
+          <p>Ad-tech platform backend designed from the ground up: scalable APIs, authentication, analytics pipelines and an end-to-end analytical dashboard over high-volume MongoDB event data.</p>
+          <ul class="tags"><li>Django</li><li>DRF</li><li>MongoDB</li><li>Analytics</li></ul>
+        </article>
+
+        <article class="card project reveal">
+          <div class="card-top">
+            <span class="card-title">Seagrass Habitat Analysis</span>
+            <a class="ext-link" href="https://github.com/marinebon/HackingLimno2025" target="_blank" rel="noopener" aria-label="Seagrass analysis repository">Repo <span aria-hidden="true">↗</span></a>
+          </div>
+          <p>Reproducible notebook merging OBIS and GBIF occurrences with environmental layers. One-Class SVM anomaly detection, temporal trends and Species Distribution Model maps. Taught as a workshop at Hacking Limnology 2025.</p>
+          <ul class="tags"><li>Python</li><li>scikit-learn</li><li>xarray</li><li>SDM</li></ul>
+          <p class="links-row"><a href="https://colab.research.google.com/drive/1YKo4psy338h76tzHpnFgJ_O8oozaM7hc" target="_blank" rel="noopener">Open in Colab <span aria-hidden="true">↗</span></a></p>
+        </article>
+
+        <article class="card project reveal">
+          <div class="card-top">
+            <span class="card-title">KachaMorich</span>
+            <a class="ext-link" href="https://github.com/MehrazRumman" target="_blank" rel="noopener" aria-label="KachaMorich on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <p>E-commerce app with account management, purchasing, payments, profile editing and order reviews for customers; user and product management, role promotion, and delivery and payment status controls for admins.</p>
+          <ul class="tags"><li>Django</li><li>DRF</li><li>React</li><li>PostgreSQL</li></ul>
+        </article>
+
+        <article class="card project reveal">
+          <div class="card-top">
+            <span class="card-title">DSP with Fast Fourier Transform</span>
+            <span class="badge">Academic</span>
+          </div>
+          <p>Digital signal processing study applying the FFT to analyse and filter signals, built during my mathematics degree.</p>
+          <ul class="tags"><li>Python</li><li>NumPy</li><li>Signal Processing</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section container" id="skills">
+      <header class="section-head reveal">
+        <p class="section-num">05</p>
+        <h2>Skills</h2>
+      </header>
+
+      <div class="grid grid-2 skills-grid">
+        <div class="card reveal">
+          <p class="card-label">Languages</p>
+          <ul class="tags tags-lg"><li>Python</li><li>Go</li><li>SQL</li><li>C</li><li>C++</li><li>Fortran</li></ul>
+        </div>
+        <div class="card reveal">
+          <p class="card-label">Frameworks</p>
+          <ul class="tags tags-lg"><li>Django</li><li>Django REST Framework</li><li>FastAPI</li><li>Next.js</li><li>React</li><li>React Native</li><li>PyQt5</li></ul>
+        </div>
+        <div class="card reveal">
+          <p class="card-label">Databases</p>
+          <ul class="tags tags-lg"><li>PostgreSQL</li><li>ClickHouse</li><li>MongoDB</li></ul>
+        </div>
+        <div class="card reveal">
+          <p class="card-label">Tools &amp; Infrastructure</p>
+          <ul class="tags tags-lg"><li>Docker</li><li>CI/CD</li><li>GitHub Actions</li><li>Jenkins</li><li>Git</li><li>Bitbucket</li><li>OpenRTB</li></ul>
+        </div>
+        <div class="card reveal">
+          <p class="card-label">Data &amp; Machine Learning</p>
+          <ul class="tags tags-lg"><li>Pandas</li><li>NumPy</li><li>scikit-learn</li><li>xarray</li><li>matplotlib</li><li>folium</li><li>SVM / One-Class SVM</li><li>Random Forest</li><li>Regression</li><li>Species Distribution Modeling</li></ul>
+        </div>
+        <div class="card reveal">
+          <p class="card-label">Mathematics</p>
+          <ul class="tags tags-lg"><li>Linear Algebra</li><li>Calculus</li><li>Fuzzy Mathematics</li><li>Data Structures &amp; Algorithms</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS ============ -->
+    <section class="section container" id="achievements">
+      <header class="section-head reveal">
+        <p class="section-num">06</p>
+        <h2>Competitive Programming</h2>
+        <p class="section-sub">Specialist on <a href="https://codeforces.com/profile/keai33" target="_blank" rel="noopener">Codeforces</a> (keai33) · 3★ on CodeChef · problems on LeetCode and HackerRank.</p>
+      </header>
+
+      <ul class="achievements">
+        <li class="reveal"><span class="ach-rank ach-gold">Champion</span><span class="ach-text">JnU Intra-University Programming Contest (solo), 2021</span></li>
+        <li class="reveal"><span class="ach-rank ach-gold">Champion</span><span class="ach-text">KYAU National Hackathon · Team Quantum Guys</span></li>
+        <li class="reveal"><span class="ach-rank">Hon. Mention</span><span class="ach-text">ICPC Dhaka Regional, 2021</span></li>
+        <li class="reveal"><span class="ach-rank">11th</span><span class="ach-text">UITS Inter-University Programming Contest</span></li>
+        <li class="reveal"><span class="ach-rank">46th</span><span class="ach-text">CoU Inter-University Programming Contest · Team JnU_Team_Z</span></li>
+        <li class="reveal"><span class="ach-rank">49th</span><span class="ach-text">BUET Inter-University Programming Contest · Team JnU_ABC</span></li>
+      </ul>
+    </section>
+
+    <!-- ============ WRITING & TALKS ============ -->
+    <section class="section container" id="writing">
+      <header class="section-head reveal">
+        <p class="section-num">07</p>
+        <h2>Talks &amp; Writing</h2>
+      </header>
+
+      <ul class="writing-list">
+        <li class="reveal">
+          <a href="https://aquaticdatasciopensci.github.io/day1-marine-remote-sensing/" target="_blank" rel="noopener">
+            <span class="w-kind">Keynote</span>
+            <span class="w-title">pyOBIS and marine ecological modeling</span>
+            <span class="w-meta">Hacking Limnology 2025 · plus a hands-on Species Distribution Modeling workshop</span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="https://medium.com/@MehrazHossainRumman/marine-life-meets-python-a-guide-to-pyobis-c802657cdbd9" target="_blank" rel="noopener">
+            <span class="w-kind">Article</span>
+            <span class="w-title">Marine Life Meets Python: A guide to pyOBIS</span>
+            <span class="w-meta">Medium · May 2025</span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="https://www.linkedin.com/pulse/how-i-math-grad-cracked-gsoc-2025-ioos-mehraz-hossain-rumman-7ianc" target="_blank" rel="noopener">
+            <span class="w-kind">Article</span>
+            <span class="w-title">How I, a Math Grad, Cracked GSoC 2025 at IOOS</span>
+            <span class="w-meta">LinkedIn</span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="https://gist.github.com/MehrazRumman/bc59c0b9672e1f976a7bd790e4f662b0" target="_blank" rel="noopener">
+            <span class="w-kind">Report</span>
+            <span class="w-title">GSoC 2025 Final Report: pyOBIS for stakeholders</span>
+            <span class="w-meta">GitHub Gist</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section container" id="contact">
+      <div class="contact-card reveal">
+        <p class="section-num">08</p>
+        <h2>Let's talk</h2>
+        <p class="lead">
+          Whether it's a backend role, an open-source collaboration, or a question about GSoC,
+          my inbox is open.
+        </p>
+        <a class="btn btn-primary btn-lg" href="mailto:mehrazrumman@gmail.com">mehrazrumman@gmail.com</a>
+        <ul class="contact-links">
+          <li><a href="https://github.com/MehrazRumman" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/mehraz-rumman/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://medium.com/@MehrazHossainRumman" target="_blank" rel="noopener">Medium</a></li>
+          <li><a href="https://codeforces.com/profile/keai33" target="_blank" rel="noopener">Codeforces</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> Mehraz Hossain Rumman · Dhaka, Bangladesh</p>
+    <p class="muted">Built with plain HTML, CSS and JavaScript. Hosted on GitHub Pages.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

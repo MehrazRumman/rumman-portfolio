@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — Mehraz Hossain Rumman</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <!-- Self-contained: GitHub Pages serves this file for any missing path, so it must not depend on relative asset URLs. -->
+  <style>
+    :root {
+      --bg: #0a0d14; --text: #e7eaf1; --strong: #ffffff; --muted: #9aa4b8;
+      --accent: #5eead4; --accent-ink: #062a25; --grad-a: #5eead4; --grad-b: #60a5fa;
+      --grid: rgba(255,255,255,0.035); color-scheme: dark;
+    }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) {
+        --bg: #f7f8fb; --text: #1f2937; --strong: #0b1220; --muted: #5b6678;
+        --accent: #0f766e; --accent-ink: #ffffff; --grad-a: #0f766e; --grad-b: #2563eb;
+        --grid: rgba(15,23,42,0.05); color-scheme: light;
+      }
+    }
+    :root[data-theme="light"] {
+      --bg: #f7f8fb; --text: #1f2937; --strong: #0b1220; --muted: #5b6678;
+      --accent: #0f766e; --accent-ink: #ffffff; --grad-a: #0f766e; --grad-b: #2563eb;
+      --grid: rgba(15,23,42,0.05); color-scheme: light;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 2rem;
+      font-family: "Inter", system-ui, -apple-system, sans-serif; color: var(--text); background: var(--bg);
+      background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .code { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.85rem; letter-spacing: 0.1em; color: var(--accent); margin: 0 0 0.5rem; }
+    .code::before { content: "// "; opacity: 0.6; }
+    h1 {
+      font-family: "Space Grotesk", "Inter", sans-serif; font-size: clamp(2.2rem, 7vw, 4rem); letter-spacing: -0.03em; margin: 0 0 0.75rem;
+      background: linear-gradient(90deg, var(--grad-a), var(--grad-b)); -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    p { color: var(--muted); font-size: 1.1rem; margin: 0 0 2rem; }
+    a.btn {
+      display: inline-block; padding: 0.8rem 1.4rem; border-radius: 999px; font-weight: 600; text-decoration: none;
+      background: var(--accent); color: var(--accent-ink); box-shadow: 0 10px 30px -12px var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="code">404</p>
+    <h1>Nothing here.</h1>
+    <p>That page doesn't exist, or it moved.</p>
+    <a class="btn" href="/rumman-portfolio/">Back to the portfolio</a>
+  </main>
+</body>
+</html>
