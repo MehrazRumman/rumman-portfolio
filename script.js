@@ -167,7 +167,7 @@ var ANALYTICS = {
           .sort(function (a, b) {
             return (b.stargazers_count - a.stargazers_count) || (new Date(b.pushed_at) - new Date(a.pushed_at));
           })
-          .slice(0, 4);
+          .slice(0, 3);
         if (!top.length) return;
         list.innerHTML = top.map(function (r) {
           var meta = [r.language, r.stargazers_count ? '★ ' + r.stargazers_count : null].filter(Boolean).join(' · ');

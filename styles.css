@@ -201,7 +201,7 @@ a.card:hover, .project:hover { border-color: var(--border-strong); transform: tr
 .gh-repos a { display: grid; gap: 0.15rem; padding: 0.65rem 0.75rem; border-radius: 10px; border: 1px solid var(--border); background: var(--surface-2); transition: border-color 0.15s, transform 0.15s; }
 .gh-repos a:hover { border-color: var(--border-strong); transform: translateX(2px); }
 .gh-name { font-weight: 600; font-size: 0.92rem; }
-.gh-desc { font-size: 0.8rem; color: var(--text-2); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.gh-desc { font-size: 0.8rem; color: var(--text-2); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
 .gh-meta { font-size: 0.68rem; margin-top: 0.15rem; }
 
 /* ---------- Bento ---------- */
